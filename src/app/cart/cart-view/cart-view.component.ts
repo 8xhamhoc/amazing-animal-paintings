@@ -30,4 +30,11 @@ export class CartViewComponent implements OnInit{
   getTotalPrice(): number {
     return this.cartItems.reduce((total, item) => total + item.price, 0);
   }
+
+  checkout(): void {
+    this.cartService.checkout(this.cartItems).subscribe(() => {
+      this.cartItems = [];
+      this.totalPrice = 0;
+    });
+  }
 }

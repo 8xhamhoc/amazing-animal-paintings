@@ -22,3 +22,7 @@ mat-card:hover {
 mat-card {
     transition: transform 0.3s ease;
 }
+
+.sort-dropdown {
+  margin-left: 20px;
+}
